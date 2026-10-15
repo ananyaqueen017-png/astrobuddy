@@ -1,0 +1,12 @@
+{
+  "_readme": "Add cases computed by a TRUSTED reference (e.g. Swiss Ephemeris swetest, Jagannatha Hora, astro.com) using the SAME settings. Longitudes are degrees in the chosen zodiac. See backend/README.md 'Verifying accuracy'. Until cases are added, tests/test_reference_fixtures.py is skipped.",
+  "toleranceDegrees": 0.01,
+  "_exampleCase": {
+    "id": "example-do-not-use",
+    "source": "tool name + version + settings you used",
+    "birth": {"date": "2000-01-01", "time": "12:00", "latitude": 26.2183, "longitude": 78.1828, "timezone": "Asia/Kolkata",
+              "settings": {"zodiac": "sidereal", "ayanamsa": "lahiri", "houseSystem": "whole_sign", "nodeType": "mean"}},
+    "expected": {"ascendantLongitude": 0.0, "planets": {"sun": 0.0, "moon": 0.0}}
+  },
+  "cases": []
+}

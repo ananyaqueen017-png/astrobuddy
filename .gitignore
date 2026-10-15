@@ -1,0 +1,20 @@
+node_modules
+.next
+.env.local
+next-env.d.ts
+astrobuddy/
+
+# Python backend and secrets
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.venv/
+backend/__pycache__/
+__pycache__/
+*.py[cod]
+
+# Build output and duplicate frontend
+node_modules/
+.next/
+astrobuddy/

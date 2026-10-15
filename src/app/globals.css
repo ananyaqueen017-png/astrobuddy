@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+body {
+  @apply bg-night-950 font-body text-slate-200 antialiased;
+  background-image:
+    radial-gradient(1px 1px at 12% 18%, rgba(230,203,134,.55), transparent),
+    radial-gradient(1px 1px at 68% 8%, rgba(196,176,255,.5), transparent),
+    radial-gradient(1px 1px at 84% 52%, rgba(255,255,255,.35), transparent),
+    radial-gradient(1px 1px at 30% 76%, rgba(196,176,255,.4), transparent),
+    radial-gradient(60rem 40rem at 85% -10%, rgba(115,64,224,.18), transparent),
+    radial-gradient(50rem 40rem at -10% 110%, rgba(74,82,201,.16), transparent);
+  background-attachment: fixed;
+}
+
+:focus-visible { outline: 2px solid #D4AF5A; outline-offset: 2px; }
+
+@layer components {
+  .panel { @apply rounded-2xl border border-white/10 bg-night-800/60 backdrop-blur; }
+  .field { @apply w-full rounded-lg border border-white/15 bg-night-900/80 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-gold-400 focus:outline-none; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-primary { @apply btn bg-gold-500 text-night-950 hover:bg-gold-400; }
+  .btn-ghost { @apply btn border border-white/15 text-slate-200 hover:bg-white/5; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
